@@ -1,5 +1,11 @@
-p {
-    color: maroon;
-    font-size: 130%;
-    background-color: gray;
+#p2 {
+    color: white;
+}
+
+.p2 em{font-size: 120%; color: aqua;}
+
+.cambios p{
+    color: rgba(0, 117, 128, 0.569);
+    font-size: 150%;
+    background-color: rgb(58, 217, 34);
 }
