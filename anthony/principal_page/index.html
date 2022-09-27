@@ -1,38 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Estudiantes UTN</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
     <link rel="shortcut icon" href="images/logo.png" type="image/png" />
-    <link rel="stylesheet" href="css/body.css">
-  </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+</head>
+<body>
+    <header class="header">
+        <section class="flex">
+            <a href="https://saphiraro.com/" class="logo">
+                <img src="images/home.png" alt="" />
+            </a>
 
-  <body>
-    <div class="container">
-      <video autoplay loop muted plays-inline class="back-video">
-          <source src="images/video.mp4" type="video/mp4">
-          </source>
-      </video>
-      
-      <iframe class="header" src="header_main.html" frameborder="0"></iframe>
-      
-      <main role="main">
-        <div class="content">
-          <h1>Estudiantes ISW</h1>
-          <div class="buttons">
-            <a href="#">Anthony</a>
-            <a href="#">Jimmy</a>
-            <a href="#">Saimon</a>
-            <a href="#">Stefany</a>
-          </div>
-        </div>
-      </main>
+            <nav class="navbar">
+                <a href="https://saphiraro.com/anthony/">Anthony</a>
+                <a href="https://saphiraro.com/jimmy/">Jimmy</a>
+                <a href="https://saphiraro.com/Saimon/">Saimon</a>
+                <a href="https://saphiraro.com/Stefany/">Stefany</a>
+            </nav>
 
-      <section>
-        <div class="container">
-      </section>
-    </div>
-  </body>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </section>
+    </header>
+
+    <video id="videoBG" poster="poster.JPG" autoplay loop muted plays-inline">
+        <source src="images/video.mp4" type="video/mp4">
+        </source>
+    </video>
+
+    <main class="main">
+        <section class="home" id="home">
+            <div class="row">
+                <h1>Students</h1>
+                <a href="https://saphiraro.com/anthony/">Anthony</a>
+                <a href="https://saphiraro.com/jimmy/">Jimmy</a>
+                <a href="https://saphiraro.com/Saimon/">Saimon</a>
+                <a href="https://saphiraro.com/Stefany/">Stefany</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <section>
+            <div class="share">
+                <a href="https://www.facebook.com/gara890" class="fab fa-facebook-f"></a>
+                <a href="https://www.instagram.com/trinity159_159/?hl=es" class="fab fa-instagram"></a>
+                <a href="https://discord.gg/c7N9abdJRV" class="fab fa-discord"></a>
+                <a href="https://www.linkedin.com/in/anthony-torres-vargas-202399200/" class="fab fa-linkedin"></a>
+                <a href="https://www.youtube.com/channel/UCOnzJcsQbJiqNd6K8GG9dmg" class="fab fa-youtube"></a>
+                <a href="https://github.com/TrinityBloof" class="fab fa-github"></a>
+            </div>
+
+            <div class="credit">&copy; copyright @ 2022 by <span>Tauro</span> | all rights reserved!</div>
+        </section>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+</body>
 </html>
