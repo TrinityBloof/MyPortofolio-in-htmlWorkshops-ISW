@@ -1,0 +1,80 @@
+<div class="row">
+    <div class="content">
+        <h3>currently <span>studying</span></h3>
+        <a href="#contact" class="btn">contact me</a>
+    </div>
+
+    <div class="image">
+        <img src="images/me2.jpg" alt="">
+    </div>
+</div>
+
+<style>
+    .home {
+    margin-top: 7rem;
+}
+
+.home .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 1.5rem;
+}
+
+.home .row .content {
+    flex: 1 1 40rem;
+    text-align: center;
+}
+
+.home .row .image {
+    flex: 1 1 1rem;
+}
+
+.home .row .image img {
+    width: 600px;
+    height: 1000px;
+}
+
+.home .row .content h3 {
+    margin-bottom: 1rem;
+    font-size: 10rem;
+    color: var(--white);
+    line-height: 1;
+}
+
+.home .row .content h3 span {
+    color: var(--green);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+    background-color: var(--black-white);
+    cursor: pointer;
+    color: var(--white);
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+}
+
+.btn:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+@media (max-width:991px){
+    .home .row .content h3 {
+        font-size: 8rem;
+    }
+}
+
+@media (max-width:768px){
+    .home .row .content h3 {
+        font-size: 5rem;
+    }
+}
+</style>

@@ -8,7 +8,10 @@
     <link rel="shortcut icon" href="images/logo.png" type="image/png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
 </head>
 <body>
     <header class="header">
@@ -31,33 +34,37 @@
 
     <main class="main">
         <section class="home" id="home">
-            <div class="row">
-                <div class="content">
-                    <h3>currently <span>studying</span></h3>
-                    <a href="#contact" class="btn">contact me</a>
-                </div>
+        </section>
 
-                <div class="image">
-                    <img src="images/me.jpg" alt="">
+        <section class="projects" id="projects">
+            <h1 class="heading">my <span>github projects</span></h1>
+            <div class="swiper projects-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide">
+                        <a href="homeworks">
+                            <img src="images/workshops.png" alt="">
+                        </a>
+                        <h3>Workshop UTN</h3>
+                        <p>my web development classes</p>
+                     </div>
+            
+                     <div class="swiper-slide slide">
+                        <img src="images/workshops.png" alt="">
+                        <h3>n/a</h3>
+                        <p>n/a</p>
+                     </div>
+
+                     <div class="swiper-slide slide">
+                        <img src="images/workshops.png" alt="">
+                        <h3>n/a</h3>
+                        <p>n/a</p>
+                     </div>
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
         </section>
 
         <section class="about" id="about">
-            <div class="row">
-                <div class="image">
-                    <img src="images/about-img.svg" alt="">
-                </div>
-
-                <div class="content">
-                    <h3>About me</h3>
-                    <p>I have liked videogames since I was little and that led me to get into the world of computing from a very young age.<br>
-                        Managing to learn many branches of the software and thanks to a game in which I worked for several years (ragnarok online) under the rAthena license, I was able to put my knowledge into practice in the real world.<br>   
-                        Study at the Universidad Técnica Nacional of Costa Rica a pilot plan of ISW-ILE (software engineering and English).<br>        
-                        Resulting today in a large amount of knowledge such as (database-web programmer-application programmer-2d/3d design-sounds-etc...)</p>
-                    <a href="#achievement" class="btn">more...</a>
-                </div>
-            </div>
         </section>
 
         <section class="count" id="achievement">
@@ -324,6 +331,29 @@
 
 
     <script src="js/script.js"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <script> 
+        var swiper = new Swiper(".projects-slider", {
+            spaceBetween: 20,
+            grabCursor:true,
+            loop:true,
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+            breakpoints: {
+            540: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+            },
+        });
+    </script>
 </body>
 </html>
