@@ -164,7 +164,7 @@ section {
     -moz-transform: translateY(-6px);
     -ms-transform: translateY(-6px);
     -o-transform: translateY(-6px);
-    box-shadow: 0 11px 14px rgb(0, 0, 0 / 25%), 0 8px 20px rgb(0, 0, 0 / 10%);
+    box-shadow: 0 11px 14px var(--green);
 }
 
 .weeks .image-contener {
@@ -194,6 +194,7 @@ section {
 }
 
 .weeks .meta-contener .desc {
+    text-transform: none;
     font-size: 13px;
     text-align: center;
     color: var(--white);
@@ -211,8 +212,9 @@ section {
     width: 100%;
     padding: 6px 0;
     text-decoration: none;
-    background: linear-gradient(125deg, var(--green) 0%, #0091a7 60%);
-    color: var(--white);
+    background: var(--green);
+    color: var(--black-white);
+    font-weight: bold;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
