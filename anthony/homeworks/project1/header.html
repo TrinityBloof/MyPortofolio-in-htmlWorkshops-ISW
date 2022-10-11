@@ -1,0 +1,136 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+  />
+</head>
+
+<section class="flex">
+  <a href="/anthony/homeworks" class="logo">
+    <img src="images/home.png" alt="" />
+  </a>
+
+  <nav class="navbar">
+    <a href="#about">login</a>
+  </nav>
+
+  <div id="menu-btn" class="fas fa-bars"></div>
+</section>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+
+  :root {
+    --green: #00e77f;
+    --white: #fff;
+    --light-white: #aaa;
+    --black: #3d3d3d;
+    --light-bg: #4b4b4b;
+    --black-white: rgb(17, 17, 17);
+  }
+
+  * {
+    font-family: "Rubik", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.2s linear;
+    -webkit-transition: 0.2s linear;
+    -moz-transition: 0.2s linear;
+    -ms-transition: 0.2s linear;
+    -o-transition: 0.2s linear;
+    text-transform: capitalize;
+  }
+
+  *::selection {
+    background-color: var(--white);
+    color: var(--black);
+  }
+
+  html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+  }
+
+  section {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--black-white);
+  }
+
+  .header .flex {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header .flex .logo img {
+    width: 40px;
+  }
+
+  .header .flex .navbar a {
+    margin-left: 2rem;
+    color: var(--white);
+    font-size: 2rem;
+    padding: 2rem;
+  }
+
+  .header .flex .navbar a:hover {
+    color: var(--green);
+  }
+
+  #menu-btn {
+    cursor: pointer;
+    color: var(--white);
+    font-size: 2.5rem;
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    #menu-btn {
+      display: inline-block;
+    }
+
+    #menu-btn.fa-times {
+      transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+    }
+
+    .header .flex .navbar {
+      position: absolute;
+      top: 99%;
+      left: 0;
+      right: 0;
+      border-top: 0.1rem solid var(--white);
+      border-bottom: 0.1rem solid var(--white);
+      background-color: var(--black-white);
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .flex .navbar.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .flex .navbar a {
+      display: block;
+    }
+  }
+</style>
