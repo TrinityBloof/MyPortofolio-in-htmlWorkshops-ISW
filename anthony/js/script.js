@@ -2,6 +2,7 @@ let menuBtn = document.querySelector('#menu-btn');
 let navbar = document.querySelector('.header .flex .navbar');
 let home = document.querySelector('#home');
 let about = document.querySelector('#about');
+let footer = document.querySelector("#footer");
 
 fetch('home.html').then(res=>res.text()).then(data=>{
     home.innerHTML=data;
@@ -9,6 +10,12 @@ fetch('home.html').then(res=>res.text()).then(data=>{
 
 fetch('about.html').then(res=>res.text()).then(data=>{
     about.innerHTML=data;
+});
+
+fetch("/anthony/footer.html")
+  .then((res) => res.text())
+  .then((data) => {
+    footer.innerHTML = data;
 });
 
 menuBtn.onclick = () => {

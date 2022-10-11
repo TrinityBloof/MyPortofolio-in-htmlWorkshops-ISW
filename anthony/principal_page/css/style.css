@@ -139,45 +139,6 @@ section {
     color: transparent;
 }
 
-.footer {
-    margin-top: 27.2rem;
-    background-color: var(--black-white);
-    text-align: center;
-}
-
-.footer .share a {
-    margin: 0 .2rem;
-    height: 4.5rem;
-    width: 4.5rem;
-    line-height: 4.5rem;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    font-size: 2.2rem;
-    color: var(--white);
-    background-color: var(--black);
-}
-
-.footer .share a:hover {
-    background-color: var(--green);
-}
-
-.footer .credit {
-    margin-top: 1rem;
-    margin-bottom: -1rem;
-    padding: 0.5rem;
-    padding-top: 1rem;
-    border-top: .2rem solid var(--green);
-    font-size: 2rem;
-    color: var(--white);
-}
-
-.footer .credit span {
-    color: var(--green);
-}
-
 #videoBG {
     position: fixed;
     right: 0;
