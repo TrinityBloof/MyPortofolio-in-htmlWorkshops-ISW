@@ -93,6 +93,7 @@ section {
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
+    cursor: pointer;
 }
 
 .main .info .right img {
@@ -113,13 +114,53 @@ section {
     font-weight: normal;
 }
 
+.main .section2 h3 {
+    color: #00D88D;
+    text-align: center;
+}
+
+.main .section2 h4 {
+    color: whitesmoke;
+    text-align: center;
+    font-weight: normal;
+}
+
+.main .section2 p {
+    color: var(--light-white);
+    text-align: center;
+    text-transform: none;
+}
+
 .main .section3 {
     height: 600px;
     text-transform: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    text-align: center;
+}
+
+.main .section3 h1 {
+    text-transform: none;
     font-weight: normal;
+}
+
+.main .section3 p {
+    text-transform: none;
+    font-weight: normal;
+}
+
+.main .section3 button {
+    width: 15rem;
+    height: 3rem;
+    background-color: #00aae4;
+    color: white;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    cursor: pointer;
 }
 
 .main .section4 {
@@ -130,6 +171,19 @@ section {
     justify-content: space-around;
     align-items: center;
     flex-direction: column;;
+    font-weight: normal;
+    text-align: center;
+}
+
+.main .section4 .name h2 {
+    color: white;
+    text-transform: none;
+    font-weight: normal;
+}
+
+.main .section4 .name p {
+    color: var(--light-white);
+    text-transform: none;
     font-weight: normal;
 }
 
@@ -144,7 +198,7 @@ section {
 
 @media (max-width:768px){
     html {
-        font-size: 50%;
+        font-size: 35%;
     }
 
     .main .dashboard-no-login .info img {
@@ -158,5 +212,13 @@ section {
 
     .main .info .right {
         margin-top: 6rem;
+    }
+
+    .main .info .right img {
+        width: 40%;
+    }
+
+    .main .section4 .images img{
+        width: 85%;
     }
 }
