@@ -18,17 +18,19 @@
             </div>
 
             <div class="form">
-                <h1>Welcome to TicoRides.com</h1>
-                <br><br>
-                <h3>Search for a ride</h3>
-                <form action="find.html">
-                    <label for="input1">From</label>
-                    <input type="text" placeholder="Input text" id="input1" class="input-text">
-                    <input type="image" src="images/icono-google.png" class="input-btn" alt="asd" style="pointer-events: none;">
-                    <label for="input2">To</label>
-                    <input type="text" placeholder="Input text" id="input2" class="input-text">
-                    <input type="image" src="images/icono-google.png" class="input-btn" alt="asd" style="pointer-events: none;">
-                    <button onClick="location.href='find.html'">Find my Ride!</button>
+                <form action="../login.html">
+                    <label>Username</label>
+                    <br>
+                    <input type="text" placeholder="Username" class="input-text">
+                    <br><br>
+                    <label>Password</label>
+                    <br>
+                    <input type="password" placeholder="password" class="input-text">
+                    <br><br>
+                    <label>Not an User?  </label>
+                    <label><a href="register.html">Register Here</a></label>
+                    <br><br>
+                    <button onClick="location.href='../login.html'">Login</button>
                 </form>
             </div>
         </section>

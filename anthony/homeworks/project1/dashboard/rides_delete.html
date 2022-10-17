@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header" id="header"></header>
+    <header class="header_login" id="header_login"></header>
 
     <main class="main" id="main">
         <section class="dashboard-no-login" id="dashboard-no-login">
@@ -17,21 +17,17 @@
                 <img src="images/logo_company.png" alt="">
             </div>
 
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html"  class="pintado">Dashboard</a></li>
+                    <li><a href="dashboard.html">Rides</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                </ul>
+            </div>
+
             <div class="form">
-                <h1>Welcome to TicoRides.com</h1>
+                <h1>Dashboard</h1>
                 <br><br>
-                <h3>Search for a ride</h3>
-                <form action="find.html">
-                    <label for="input1">From</label>
-                    <input type="text" placeholder="Input text" id="input1" class="input-text">
-                    <input type="image" src="images/icono-google.png" class="input-btn" alt="asd">
-                    <label for="input2">To</label>
-                    <input type="text" placeholder="Input text" id="input2" class="input-text">
-                    <input type="image" src="images/icono-google.png" class="input-btn" alt="asd">
-                    <button onClick="location.href='find.html'">Find my Ride!</button>
-                </form>
-                <br><br>
-                <h3>Results for Rides that matches your criteria:</h3>
                 <table class="content-table">
                     <thead>
                         <tr>
@@ -46,21 +42,14 @@
                             <td>anthony</td>
                             <td>Barrio Los Angeles</td>
                             <td>Ciudad Quesada</td>
-                            <td><a href="dashboard/norides_view1.html">View</a></td>
+                            <td><a href="/anthony/homeworks/project1/dashboard/rides_view1.html">View</a></td>
                         </tr>
 
                         <tr>
                             <td>anthony</td>
                             <td>Ciudad Quesada</td>
                             <td>Los Angeles</td>
-                            <td><a href="dashboard/norides_view2.html">View</a></td>
-                        </tr>
-
-                        <tr>
-                            <td>yluna</td>
-                            <td>Ciudad Quesada</td>
-                            <td>San Pedro</td>
-                            <td><a href="dashboard/norides_view3.html">View</a></td>
+                            <td><a href="/anthony/homeworks/project1/dashboard/rides_view2.html">View</a></td>
                         </tr>
                     </tbody>
                 </table>

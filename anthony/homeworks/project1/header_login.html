@@ -6,12 +6,14 @@
 </head>
 
 <section class="flex">
-  <a href="/anthony/homeworks/project1/" class="logo">
+  <a href="/anthony/homeworks/project1/login.html" class="logo">
     <img src="images/home.png" alt="" />
   </a>
 
   <nav class="navbar">
-    <a href="/anthony/homeworks/project1/login/">login</a>
+    <p>Welcome <span>User</span></p>
+    <a href="/anthony/homeworks/project1/dashboard">Dashboard</a>
+    <a href="/anthony/homeworks/project1/">logout</a>
   </nav>
 
   <div id="menu-btn" class="fas fa-bars"></div>
@@ -26,6 +28,8 @@
     --light-white: #aaa;
     --black: #3d3d3d;
     --light-bg: #4b4b4b;
+    --green2: #00D88D;
+    --green3: #009879;
     --black-white: rgb(17, 17, 17);
   }
 
@@ -63,7 +67,7 @@
     padding: 2rem;
   }
 
-  .header {
+  .header_login {
     position: fixed;
     top: 0;
     left: 0;
@@ -72,25 +76,34 @@
     background-color: var(--black-white);
   }
 
-  .header .flex {
+  .header_login .flex {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .header .flex .logo img {
+  .header_login .flex .logo img {
     width: 40px;
   }
 
-  .header .flex .navbar a {
+  .header_login .flex .navbar p {
+    font-size: 1.5rem;
+  }
+
+  .header_login .flex .navbar p span {
+    font-size: 1.6rem;
+    color: var(--green2);
+  }
+
+  .header_login .flex .navbar a {
     margin-left: 2rem;
     color: var(--white);
     font-size: 2rem;
     padding: 2rem;
   }
 
-  .header .flex .navbar a:hover {
+  .header_login .flex .navbar a:hover {
     color: var(--green);
   }
 
@@ -114,7 +127,7 @@
       -o-transform: rotate(180deg);
     }
 
-    .header .flex .navbar {
+    .header_login .flex .navbar {
       position: absolute;
       top: 99%;
       left: 0;
@@ -125,11 +138,11 @@
       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
 
-    .header .flex .navbar.active {
+    .header_login .flex .navbar.active {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 
-    .header .flex .navbar a {
+    .header_login .flex .navbar a {
       display: block;
     }
   }
