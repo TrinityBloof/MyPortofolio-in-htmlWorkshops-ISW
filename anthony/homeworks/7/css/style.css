@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+:root {
+    --background: white;
+    --background-div1: yellow;
+    --background-center-div1: orange;
+    --background-center-div2: blue;
+    --background-center-div3: blue;
+    --background-center-div4: blue;
+    --green: #00E77F;
+}
+
+* {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+*::selection {
+    background-color: var(--green);
+    color: var(--green);
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    height: .5rem;
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--green);
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+}
+
+body {
+    background-color: var(--background);
+}
+
+section {
+    max-width: 936px;
+    margin: 0 auto;
+    padding: 0.2rem;
+}
+
+.main {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.main .title .div1 {
+    background-color: var(--background-div1);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+.main .title .div1 h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.main .title .div1 h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.main .center {
+    display: flex;
+}
+
+.main .center .div1 {
+    background-color: var(--background-center-div1);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    width: 20%;
+    height: 10%;
+}
+
+.main .center .div12 {
+    background-color: var(--background-center-div1);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    width: 20%;
+    height: 10%;
+    display: none;
+}
+
+.main .center .div1 a {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+    margin: 1rem 1rem;
+}
+
+.main .center .div2 {
+    background-color: var(--background-center-div2);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    width: 50%;
+    height: 30%;
+    margin-left: 2rem;
+}
+
+.main .center .div2 h3 {
+    font-size: 2rem;
+    color: white;
+    margin: 3rem 1rem;
+}
+
+.main .center .div2 p {
+    font-size: 1.5rem;
+    color: white;
+    margin: 1rem 1rem;
+}
+
+.main .center .secondColumn {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main .center .secondColumn .div3, .div4 {
+    background-color: var(--background-center-div3);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    margin-left: 2rem;
+}
+
+.main .center .secondColumn .div3 h3 {
+    font-size: 2rem;
+    color: white;
+    margin: 3rem 1rem;
+}
+
+.main .center .secondColumn .div3 p {
+    font-size: 1.5rem;
+    color: white;
+    margin: 1rem 1rem;
+}
+
+.main .center .secondColumn .div4 {
+    margin-top: 2rem;
+}
+
+.main .center .secondColumn .div4 h3 {
+    font-size: 2rem;
+    color: white;
+    margin: 3rem 1rem;
+}
+
+.main .center .secondColumn .div4 p {
+    font-size: 1.5rem;
+    color: white;
+    margin: 1rem 1rem;
+}
+
+.main .end .div1 {
+    background-color: pink;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+.main .end .div1 p {
+    margin: 1rem 1rem;
+    font-size: 1.5rem;
+}
+
+@media (max-width:600px){
+    html {
+        font-size: 55%;
+    }
+
+    .main .title .div1 h1 {
+        text-align: left;
+    }
+
+    .main .title .div1 h2 {
+        margin-top: 1rem;
+        text-align: left;
+    }
+
+    .main .center {
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+
+    .main .center .div1 {
+        width: 100%;
+        display: none;
+    }
+
+    .main .center .div12 {
+        width: 100%;
+        display: block;
+    }
+
+    .main .center .div2 {
+        margin-top: 1rem;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .main .center .secondColumn {
+        width: 100%;
+    }
+
+    .main .center .secondColumn .div3, .div4 {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
