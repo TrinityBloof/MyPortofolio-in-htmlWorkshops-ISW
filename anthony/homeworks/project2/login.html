@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header_login" id="header_login"></header>
+
+    <main class="main" id="main">
+        <section class="dashboard-no-login" id="dashboard-no-login">
+            <div class="info">
+                <img src="images/logo_company.png" alt="">
+            </div>
+
+            <div class="form">
+                <h1>Welcome to TicoRides.com</h1>
+                <br><br>
+                <h3>Search for a ride</h3>
+                <form action="find_login.html">
+                    <label for="input1">From</label>
+                    <input type="text" placeholder="Input text" id="input1" class="input-text">
+                    <input type="image" src="images/icono-google.png" class="input-btn" alt="asd" style="pointer-events: none;">
+                    <label for="input2">To</label>
+                    <input type="text" placeholder="Input text" id="input2" class="input-text">
+                    <input type="image" src="images/icono-google.png" class="input-btn" alt="asd" style="pointer-events: none;">
+                    <button onClick="location.href='find_login.html'">Find my Ride!</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="footer"></footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
