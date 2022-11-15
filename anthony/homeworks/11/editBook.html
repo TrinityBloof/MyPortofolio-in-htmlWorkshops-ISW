@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Books</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/template.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <section>
+      <div class="d-flex flex-column hidden">
+        <h1>Edit book</h1>
+        <div class="form-contact-info">
+          <div class="error_msg" id="error_msg"></div>
+          <form id="book-form">
+            <input type="text" name="title" value="" placeholder="Type book title" class="required" id="editTitle" />
+            <input type="text" name="author" value="" placeholder="Type your author" class="required" id="editAuthor" />
+            <input type="hidden" name="id" value="" id="editId" />
+            <input type="button" value="Save" id="save-book-button" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script>
+        const id = localStorage.getItem("editId");
+        const title = localStorage.getItem("editTitle");
+        const author = localStorage.getItem("editAuthor");
+        window.addEventListener("load", () => {
+
+            document.getElementById('editAuthor').value = author;
+	        document.getElementById('editTitle').value = title;;
+	        document.getElementById('editId').value = id;
+        });
+
+        function saveBook() {
+            const name = document.getElementById('editTitle').value;
+            const author = document.getElementById('editAuthor').value;
+            const id = document.getElementById('editId').value;
+
+            // create the book object
+            const book = {
+                name,
+                author,
+                id
+            };
+            // add it to the database
+            let books = JSON.parse(localStorage.getItem('books'));
+            let results = books.filter(book => book.id != id);
+            results.push(book);
+            localStorage.setItem('books', JSON.stringify(results));
+            window.location.href = 'books.html';
+        }
+
+        function bindEvents() {
+            jQuery('#save-book-button').bind('click', function (element) {
+                saveBook();
+            });
+        }
+
+        bindEvents();
+      </script>
+  </body>
+  
+  </html>
