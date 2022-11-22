@@ -7,9 +7,10 @@
     <title>Portafolio</title>
     <link rel="shortcut icon" href="images/logo.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <header class="header_login" id="header_login"></header>
+    <header class="header" id="header"></header>
 
     <main class="main" id="main">
         <section class="dashboard-no-login" id="dashboard-no-login">
@@ -28,17 +29,15 @@
             <div class="form">
                 <h1>Rides</h1>
                 <br>
-                <form action="add.html">
+                <form>
                     <label>Ride Name</label>
                     <br>
-                    <input type="text" placeholder="Ride Name" class="input-text">
+                    <input type="text" placeholder="Ride Name" class="input-text" id="rName">
                     <br><br>
                     <label>Start from</label>
-                    <input type="text" placeholder="Start From" class="input-text">
-                    <input type="image" src="images/icono-google.png" class="input-btn" alt="asd">
+                    <input type="text" placeholder="Start From" class="input-text" id="fromName">
                     <label id="end">End</label>
-                    <input type="text" placeholder="End" class="input-text">
-                    <input type="image" src="images/icono-google.png" class="input-btn" alt="asd">
+                    <input type="text" placeholder="End" class="input-text" id="toName">
                     <br><br><br>
                     <label>Description</label>
                     <br>
@@ -52,40 +51,40 @@
                         <br>
                         <div class="left">
                             <label>Departure</label><br>
-                            <input type="text" placeholder="00:00 TM" class="input-text"><br>
+                            <input type="text" placeholder="00:00 TM" class="input-text"  id="depar"><br>
                             <label>Estimated Arrival</label><br>
-                            <input type="text" placeholder="00:00 TM" class="input-text">
+                            <input type="text" placeholder="00:00 TM" class="input-text" id="estArrival">
                         </div>
                         <div class="right">
                             <label>Days</label>
                             <br>
-                            <input type="checkbox"><label>Monday</label>
+                            <input type="checkbox" id="monday"><label>Monday</label>
                             <br>
-                            <input type="checkbox"><label>Tuesday</label>
+                            <input type="checkbox" id="tuesday"><label>Tuesday</label>
                             <br>
-                            <input type="checkbox"><label>Wednesday</label>
+                            <input type="checkbox" id="wednesday"><label>Wednesday</label>
                             <br>
-                            <input type="checkbox"><label>Thursday</label>
+                            <input type="checkbox" id="thursday"><label>Thursday</label>
                             <br>
-                            <input type="checkbox"><label>Friday</label>
+                            <input type="checkbox" id="friday"><label>Friday</label>
                             <br>
-                            <input type="checkbox"><label>Saturday</label>
+                            <input type="checkbox" id="saturday"><label>Saturday</label>
                             <br>
-                            <input type="checkbox"><label>Sunday</label>
+                            <input type="checkbox" id="sunday"><label>Sunday</label>
                         </div>
                     </div>
                     <br><br><br>
-                    <div class="buttons">
-                        <button onClick="location.href='add.html'">Cancel</button>
-                        <button id="b2" onClick="location.href='add.html'">Save</button>
-                    </div>
                 </form>
+                <div class="buttons">
+                    <button onClick="location.href='/anthony/homeworks/project2/dashboard'">Cancel</button>
+                    <button id="save-btn" onclick="save()">Save</button>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="footer" id="footer"></footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/addRide.js"></script>
 </body>
 </html>

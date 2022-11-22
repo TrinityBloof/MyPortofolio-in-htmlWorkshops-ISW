@@ -7,6 +7,7 @@
     <title>Portafolio</title>
     <link rel="shortcut icon" href="images/logo.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <header class="header" id="header"></header>
@@ -21,15 +22,28 @@
                 <h1>Welcome to TicoRides.com</h1>
                 <br><br>
                 <h3>Search for a ride</h3>
-                <form action="find.html">
+                <form>
                     <label for="input1">From</label>
-                    <input type="text" placeholder="Input text" id="input1" class="input-text">
-                    <input type="image" src="images/icono-google.png" class="input-btn" alt="asd" style="pointer-events: none;">
+                    <select name="from" id="from-list" class="form-input"></select>
                     <label for="input2">To</label>
-                    <input type="text" placeholder="Input text" id="input2" class="input-text">
-                    <input type="image" src="images/icono-google.png" class="input-btn" alt="asd" style="pointer-events: none;">
-                    <button onClick="location.href='find.html'">Find my Ride!</button>
+                    <select name="to" id="to-list" class="form-input"></select>
                 </form>
+                <button id="findRides">Find my Ride!</button>
+                <br><br>
+                <h3>Results for Rides that matches your criteria:</h3>
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>Ride</th>
+                            <th>Start</th>
+                            <th>End</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="rides_table">
+
+                    </tbody>
+                </table>
             </div>
         </section>
     </main>

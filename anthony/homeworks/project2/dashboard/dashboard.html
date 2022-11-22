@@ -7,9 +7,10 @@
     <title>Portafolio</title>
     <link rel="shortcut icon" href="images/logo.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <header class="header_login" id="header_login"></header>
+    <header class="header" id="header"></header>
 
     <main class="main" id="main">
         <section class="dashboard-no-login" id="dashboard-no-login">
@@ -34,40 +35,21 @@
                         <h6>Your current list of Rides</h6>
                         <a href="/anthony/homeworks/project1/dashboard/rides_add.html" class="fas fa-plus-square"></a>
                     </div>
-                    <table class="content-table2">
+                    <table class="content-table">
                         <thead>
                             <tr>
-                                <th>Name</th>
+                                <th>Ride</th>
                                 <th>Start</th>
                                 <th>End</th>
-                                <th>Actions</th>
+                                <th></th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>Brete</td>
-                                <td>Barrio Los Angeles</td>
-                                <td>Ciudad Quesada</td>
-                                <td><a href="/anthony/homeworks/project1/dashboard/rides_edit1.html">Edit</a> - <a href="/anthony/homeworks/project1/dashboard/rides_delete.html">Delete</a></td>
-                            </tr>
+                        <tbody id="rides_table">
     
-                            <tr>
-                                <td>Casa</td>
-                                <td>Ciudad Quesada</td>
-                                <td>Los Angeles</td>
-                                <td><a href="/anthony/homeworks/project1/dashboard/rides_edit2.html">Edit</a> - <a href="/anthony/homeworks/project1/dashboard/rides_delete.html">Delete</a></td>
-                            </tr>
-    
-                            <tr>
-                                <td>Of cina Chepe</td>
-                                <td>Ciudad Quesada</td>
-                                <td>San Pedro</td>
-                                <td><a href="/anthony/homeworks/project1/dashboard/rides_edit3.html">Edit</a> - <a href="/anthony/homeworks/project1/dashboard/rides_delete.html">Delete</a></td>
-                            </tr>
                         </tbody>
                     </table>
 
-                    <a id="a2" href="/anthony/homeworks/project1/dashboard/rides_add.html" class="fas fa-plus-square"></a>
+                    <a id="a2" href="/anthony/homeworks/project2/dashboard/rides_add.html" class="fas fa-plus-square"></a>
                 </div>
             </div>
         </section>
@@ -75,6 +57,6 @@
 
     <footer class="footer" id="footer"></footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/viewRides.js"></script>
 </body>
 </html>

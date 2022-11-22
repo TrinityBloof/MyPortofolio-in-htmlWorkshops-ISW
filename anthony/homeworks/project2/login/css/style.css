@@ -24,7 +24,7 @@
     -moz-transition: .2s linear;
     -ms-transition: .2s linear;
     -o-transition: .2s linear;
-    text-transform: capitalize;
+    text-transform: none !important;
 }
 
 *::selection {
@@ -36,9 +36,6 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 8rem;
-}
-
-html, body {
     overflow-x: hidden;
 }
 
@@ -111,7 +108,7 @@ section {
     text-decoration: underline;
 }
 
-.main .dashboard-no-login .form form button {
+.main .dashboard-no-login .form button {
     font-size: 2rem;
     cursor: pointer;
     height: 25px;
@@ -130,6 +127,6 @@ section {
     -o-transition: all 0.3s;
 }
 
-.main .dashboard-no-login .form form button:hover {
+.main .dashboard-no-login .form button:hover {
     padding-left: 15px;
 }

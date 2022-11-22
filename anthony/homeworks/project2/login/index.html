@@ -7,6 +7,7 @@
     <title>Portafolio</title>
     <link rel="shortcut icon" href="images/logo.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <header class="header" id="header"></header>
@@ -18,20 +19,20 @@
             </div>
 
             <div class="form">
-                <form action="../login.html">
+                <form>
                     <label>Username</label>
                     <br>
-                    <input type="text" placeholder="Username" class="input-text">
+                    <input type="text" placeholder="Username" class="input-text" id="userN">
                     <br><br>
                     <label>Password</label>
                     <br>
-                    <input type="password" placeholder="password" class="input-text">
+                    <input type="password" placeholder="password" class="input-text" id="pass">
                     <br><br>
                     <label>Not an User?  </label>
                     <label><a href="register.html">Register Here</a></label>
                     <br><br>
-                    <button onClick="location.href='../login.html'">Login</button>
                 </form>
+                <button id="login-user-button">Login</button>
             </div>
         </section>
     </main>

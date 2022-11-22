@@ -7,9 +7,10 @@
     <title>Portafolio</title>
     <link rel="shortcut icon" href="images/logo.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <header class="header_login" id="header_login"></header>
+    <header class="header" id="header"></header>
 
     <main class="main" id="main">
         <section class="dashboard-no-login" id="dashboard-no-login">
@@ -31,33 +32,14 @@
                 <table class="content-table">
                     <thead>
                         <tr>
-                            <th>User</th>
+                            <th>Ride</th>
                             <th>Start</th>
                             <th>End</th>
                             <th></th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>anthony</td>
-                            <td>Barrio Los Angeles</td>
-                            <td>Ciudad Quesada</td>
-                            <td><a href="/anthony/homeworks/project1/dashboard/rides_view1.html">View</a></td>
-                        </tr>
+                    <tbody id="rides_table">
 
-                        <tr>
-                            <td>anthony</td>
-                            <td>Ciudad Quesada</td>
-                            <td>Los Angeles</td>
-                            <td><a href="/anthony/homeworks/project1/dashboard/rides_view2.html">View</a></td>
-                        </tr>
-
-                        <tr>
-                            <td>yluna</td>
-                            <td>Ciudad Quesada</td>
-                            <td>San Pedro</td>
-                            <td><a href="/anthony/homeworks/project1/dashboard/rides_view3.html">View</a></td>
-                        </tr>
                     </tbody>
                 </table>
             </div>

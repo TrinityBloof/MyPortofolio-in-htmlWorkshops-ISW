@@ -36,9 +36,6 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 8rem;
-}
-
-html, body {
     overflow-x: hidden;
 }
 
@@ -299,7 +296,7 @@ section {
     color: #009879;
 }
 
-.main .dashboard-no-login .form form button {
+.main .dashboard-no-login .form button {
     font-size: 2rem;
     cursor: pointer;
     height: 25px;
@@ -322,7 +319,7 @@ section {
     padding-left: 15px;
 }
 
-.main .dashboard-no-login .form .buttons #b2 {
+.main .dashboard-no-login .form .buttons #save-btn, #b2 {
     margin-left: 38rem;
 }
 

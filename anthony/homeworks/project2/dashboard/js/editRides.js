@@ -95,55 +95,71 @@ window.addEventListener("load", () => {
   }
 });
 
-function showListOfRides() {
-  const rides = JSON.parse(localStorage.getItem("rides"));
-  const table = document.getElementById("rides_table");
+function saveRides() {
+  const rName = $("#viewRideName").val();
+  const fromName = $("#fromName").val();
+  const toName = $("#toName").val();
+  const descp = $("#big").val();
+  const depar = $("#depar").val();
+  const estArrival = $("#estArrival").val();
+  const monday2 = document.getElementById("monday");
+  const tuesday2 = document.getElementById("tuesday");
+  const wednesday2 = document.getElementById("wednesday");
+  const thursday2 = document.getElementById("thursday");
+  const friday2 = document.getElementById("friday");
+  const saturday2 = document.getElementById("saturday");
+  const sunday2 = document.getElementById("sunday");
+  let id = localStorage.getItem("rId");
+  const arrRides = JSON.parse(window.localStorage.getItem("rides"));
 
-  if (rides) {
-    let rows = "";
-    rides.forEach((ride, index) => {
-      let row = `<tr>`;
-      row += `<td>${ride.rName}</td>`;
-      row += `<td>${ride.fromName}</td>`;
-      row += `<td>${ride.toName}</td>`;
-      row += `<td> <a onclick="viewEntity(this)" data-id="${ride.id}" class="link view" href="#">View</a> </td>`;
-      rows += row + "</tr>";
-    });
-    table.innerHTML = rows;
-  }
-}
+  for (let i = 0; i < arrRides.length; i++) {
+    if (arrRides[i].id == id) {
+      let owner = arrRides[i].owner;
+      let id = arrRides[i].id;
+      let monday = monday2.checked;
+      let tuesday = tuesday2.checked;
+      let wednesday = wednesday2.checked;
+      let thursday = thursday2.checked;
+      let friday = friday2.checked;
+      let saturday = saturday2.checked;
+      let sunday = sunday2.checked;
 
-function viewEntity(element) {
-  let currentUser = localStorage.getItem("currentUser");
-  const dataObj = jQuery(element).data();
-  let rides = JSON.parse(localStorage.getItem("rides"));
-  let rideFound;
-  rides.forEach(function (ride) {
-    if (ride.id == dataObj.id) {
-      rideFound = ride;
-      return;
+      const ride = {
+        rName,
+        fromName,
+        toName,
+        descp,
+        depar,
+        estArrival,
+        monday,
+        tuesday,
+        wednesday,
+        thursday,
+        friday,
+        saturday,
+        sunday,
+        owner,
+        id,
+      };
+      let rides = JSON.parse(localStorage.getItem("rides"));
+      let results = rides.filter((ride) => ride.id != id);
+      results.push(ride);
+      localStorage.setItem("rides", JSON.stringify(results));
+
+      localStorage.setItem("rName", rName);
+      localStorage.setItem("fromName", fromName);
+      localStorage.setItem("toName", toName);
+      localStorage.setItem("descp", descp);
+      localStorage.setItem("depar", depar);
+      localStorage.setItem("estArrival", estArrival);
+      localStorage.setItem("monday", monday);
+      localStorage.setItem("tuesday", tuesday);
+      localStorage.setItem("wednesday", wednesday);
+      localStorage.setItem("thursday", thursday);
+      localStorage.setItem("friday", friday);
+      localStorage.setItem("saturday", saturday);
+      localStorage.setItem("sunday", sunday);
+      window.location.href = "/anthony/homeworks/project2/dashboard";
     }
-  });
-
-  localStorage.setItem("rName", rideFound.rName);
-  localStorage.setItem("fromName", rideFound.fromName);
-  localStorage.setItem("toName", rideFound.toName);
-  localStorage.setItem("descp", rideFound.descp);
-  localStorage.setItem("depar", rideFound.depar);
-  localStorage.setItem("estArrival", rideFound.estArrival);
-  localStorage.setItem("monday", rideFound.monday);
-  localStorage.setItem("tuesday", rideFound.tuesday);
-  localStorage.setItem("wednesday", rideFound.wednesday);
-  localStorage.setItem("thursday", rideFound.thursday);
-  localStorage.setItem("friday", rideFound.friday);
-  localStorage.setItem("saturday", rideFound.saturday);
-  localStorage.setItem("sunday", rideFound.sunday);
-
-  if (currentUser == "") {
-    window.location.href = "norides_view.html";
-  } else {
-    window.location.href = "rides_view.html";
   }
 }
-
-showListOfRides();

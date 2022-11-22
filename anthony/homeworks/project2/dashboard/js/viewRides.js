@@ -9,19 +9,6 @@ fetch("/anthony/footer.html")
 
 window.addEventListener("load", () => {
   let currentUser = localStorage.getItem("currentUser");
-  const rName = localStorage.getItem("rName");
-  const fromName = localStorage.getItem("fromName");
-  const toName = localStorage.getItem("toName");
-  const descp = localStorage.getItem("descp");
-  const depar = localStorage.getItem("depar");
-  const estArrival = localStorage.getItem("estArrival");
-  const monday = localStorage.getItem("monday");
-  const tuesday = localStorage.getItem("tuesday");
-  const wednesday = localStorage.getItem("wednesday");
-  const thursday = localStorage.getItem("thursday");
-  const friday = localStorage.getItem("friday");
-  const saturday = localStorage.getItem("saturday");
-  const sunday = localStorage.getItem("sunday");
 
   if (!currentUser) {
     currentUser = "";
@@ -64,57 +51,30 @@ window.addEventListener("load", () => {
         });
       });
   }
-
-  document.getElementById("viewRideName").value = rName;
-  document.getElementById("fromName").value = fromName;
-  document.getElementById("toName").value = toName;
-  document.getElementById("big").value = descp;
-  document.getElementById("depar").value = depar;
-  document.getElementById("estArrival").value = estArrival;
-
-  if (monday == "true") {
-    document.getElementById("monday").checked = true;
-  }
-  if (tuesday == "true") {
-    document.getElementById("tuesday").checked = true;
-  }
-  if (wednesday == "true") {
-    document.getElementById("wednesday").checked = true;
-  }
-  if (thursday == "true") {
-    document.getElementById("thursday").checked = true;
-  }
-  if (friday == "true") {
-    document.getElementById("friday").checked = true;
-  }
-  if (saturday == "true") {
-    document.getElementById("saturday").checked = true;
-  }
-  if (sunday == "true") {
-    document.getElementById("sunday").checked = true;
-  }
 });
 
 function showListOfRides() {
   const rides = JSON.parse(localStorage.getItem("rides"));
   const table = document.getElementById("rides_table");
+  let currentUser = localStorage.getItem("currentUser");
 
   if (rides) {
     let rows = "";
     rides.forEach((ride, index) => {
-      let row = `<tr>`;
-      row += `<td>${ride.rName}</td>`;
-      row += `<td>${ride.fromName}</td>`;
-      row += `<td>${ride.toName}</td>`;
-      row += `<td> <a onclick="viewEntity(this)" data-id="${ride.id}" class="link view" href="#">View</a> </td>`;
-      rows += row + "</tr>";
+      if (ride.owner == currentUser) {
+        let row = `<tr>`;
+        row += `<td>${ride.rName}</td>`;
+        row += `<td>${ride.fromName}</td>`;
+        row += `<td>${ride.toName}</td>`;
+        row += `<td> <a onclick="editEntity(this)" data-id="${ride.id}" class="link edit" href="#">Edit</a>   |  <a  onclick="deleteEntity(this);" data-id="${ride.id}" class="link delete" href="#">Delete</a>  </td>`;
+        rows += row + "</tr>";
+      }
     });
     table.innerHTML = rows;
   }
 }
 
-function viewEntity(element) {
-  let currentUser = localStorage.getItem("currentUser");
+function editEntity(element) {
   const dataObj = jQuery(element).data();
   let rides = JSON.parse(localStorage.getItem("rides"));
   let rideFound;
@@ -138,12 +98,20 @@ function viewEntity(element) {
   localStorage.setItem("friday", rideFound.friday);
   localStorage.setItem("saturday", rideFound.saturday);
   localStorage.setItem("sunday", rideFound.sunday);
-
-  if (currentUser == "") {
-    window.location.href = "norides_view.html";
-  } else {
-    window.location.href = "rides_view.html";
-  }
+  localStorage.setItem("rId", rideFound.id);
+  window.location.href = "rides_edit.html";
 }
+
+function deleteEntity(element) {
+
+    if (confirm('Are you sure you want to delete?')) {
+      const dataObj = jQuery(element).data();
+
+      let rides = JSON.parse(localStorage.getItem('rides'));
+      let results = rides.filter(ride => ride.id != dataObj.id);
+      localStorage.setItem('rides', JSON.stringify(results));
+      showListOfRides();
+    }
+  }
 
 showListOfRides();

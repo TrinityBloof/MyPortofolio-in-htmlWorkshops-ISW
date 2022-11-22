@@ -7,6 +7,7 @@
     <title>Portafolio</title>
     <link rel="shortcut icon" href="images/logo.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <header class="header" id="header"></header>
@@ -18,36 +19,36 @@
             </div>
 
             <div class="form">
-                <form action="../login.html">
+                <form>
                     <label>First Name</label>
                     <br>
-                    <input type="text" placeholder="First Name" class="input-text">
+                    <input type="text" placeholder="First Name" class="input-text" id="fName">
                     <br><br>
                     <label>Last Name</label>
                     <br>
-                    <input type="text" placeholder="Last Name" class="input-text">
+                    <input type="text" placeholder="Last Name" class="input-text" id="lName">
                     <br><br>
                     <label>Phone</label>
                     <br>
-                    <input type="tel" class="input-text" placeholder="(XXX) XXX-XXXX">
+                    <input type="tel" class="input-text" placeholder="(XXX) XXX-XXXX" id="phone">
                     <br><br>
                     <label>Username</label>
                     <br>
-                    <input type="text" placeholder="Username" class="input-text">
+                    <input type="text" placeholder="Username" class="input-text" id="userN">
                     <br><br>
                     <label>Password</label>
                     <br>
-                    <input type="password" placeholder="password" class="input-text">
+                    <input type="password" placeholder="password" class="input-text" id="pass">
                     <br><br>
                     <label>Repeat password</label>
                     <br>
-                    <input type="password" placeholder="Repeat password" class="input-text">
+                    <input type="password" placeholder="Repeat password" class="input-text" id="rPass">
                     <br><br>
                     <label>Already an user?  </label>
                     <label><a href="index.html">Login Here</a></label>
                     <br><br>
-                    <button onClick="location.href='../login.html'">Register</button>
                 </form>
+                <button id="add-user-button">Register</button>
             </div>
         </section>
     </main>

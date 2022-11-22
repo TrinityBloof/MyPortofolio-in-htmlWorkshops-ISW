@@ -7,9 +7,10 @@
     <title>Portafolio</title>
     <link rel="shortcut icon" href="images/logo.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <header class="header_login" id="header_login"></header>
+    <header class="header" id="header"></header>
 
     <main class="main" id="main">
         <section class="dashboard-no-login" id="dashboard-no-login">
@@ -28,21 +29,19 @@
             <div class="form">
                 <h1>Rides</h1>
                 <br>
-                <form action="#">
+                <form>
                     <label>Ride Name</label>
                     <br>
-                    <input type="text" value="yluna" class="input-text" readonly>
+                    <input type="text" class="input-text" id="viewRideName">
                     <br><br>
                     <label>Start from</label>
-                    <input type="text" value="Ciudad Quesada" class="input-text" readonly>
-                    <input type="image" src="images/icono-google.png" class="input-btn" alt="asd">
+                    <input type="text" class="input-text" id="fromName">
                     <label id="end">End</label>
-                    <input type="text" value="San Pedro" class="input-text" readonly>
-                    <input type="image" src="images/icono-google.png" class="input-btn" alt="asd">
+                    <input type="text" class="input-text" id="toName">
                     <br><br><br>
                     <label>Description</label>
                     <br>
-                    <input id="big" type="text" value="No description" class="input-text" readonly>
+                    <input id="big" type="text" class="input-text">
                     <br><br>
                     <div id="when" ></div>
                     <br>
@@ -52,35 +51,40 @@
                         <br>
                         <div class="left">
                             <label>Departure</label><br>
-                            <input type="text" value="7:00 AM" class="input-text" readonly><br>
+                            <input type="text" class="input-text" id="depar"><br>
                             <label>Estimated Arrival</label><br>
-                            <input type="text" value="8:30 AM" class="input-text" readonly>
+                            <input type="text" class="input-text" id="estArrival">
                         </div>
                         <div class="right">
                             <label>Days</label>
                             <br>
-                            <input type="checkbox" checked style="pointer-events: none;"><label>Monday</label>
+                            <input type="checkbox" id="monday"><label>Monday</label>
                             <br>
-                            <input type="checkbox" checked style="pointer-events: none;"><label>Tuesday</label>
+                            <input type="checkbox" id="tuesday"><label>Tuesday</label>
                             <br>
-                            <input type="checkbox" checked style="pointer-events: none;"><label>Wednesday</label>
+                            <input type="checkbox" id="wednesday"><label>Wednesday</label>
                             <br>
-                            <input type="checkbox" style="pointer-events: none;"><label>Thursday</label>
+                            <input type="checkbox" id="thursday"><label>Thursday</label>
                             <br>
-                            <input type="checkbox" checked style="pointer-events: none;"><label>Friday</label>
+                            <input type="checkbox" id="friday"><label>Friday</label>
                             <br>
-                            <input type="checkbox" checked style="pointer-events: none;"><label>Saturday</label>
+                            <input type="checkbox" id="saturday"><label>Saturday</label>
                             <br>
-                            <input type="checkbox" style="pointer-events: none;"><label>Sunday</label>
+                            <input type="checkbox" id="sunday"><label>Sunday</label>
                         </div>
                     </div>
+                    <br><br><br>
                 </form>
+                <div class="buttons">
+                    <button onClick="location.href=location.href='/anthony/homeworks/project2/dashboard'">Cancel</button>
+                    <button id="b2" onClick="saveRides()">Save</button>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="footer" id="footer"></footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/editRides.js"></script>
 </body>
 </html>

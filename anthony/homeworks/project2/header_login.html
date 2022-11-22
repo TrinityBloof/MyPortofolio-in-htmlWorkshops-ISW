@@ -6,14 +6,14 @@
 </head>
 
 <section class="flex">
-  <a href="/anthony/homeworks/project1/login.html" class="logo">
+  <a href="/anthony/homeworks/project2/" class="logo">
     <img src="images/home.png" alt="" />
   </a>
 
   <nav class="navbar">
-    <p>Welcome <span>User</span></p>
-    <a href="/anthony/homeworks/project1/dashboard">Dashboard</a>
-    <a href="/anthony/homeworks/project1/">logout</a>
+    <p>Welcome <span id="nameUser">User</span></p>
+    <a href="/anthony/homeworks/project2/dashboard">Dashboard</a>
+    <a id="logout">Logout</a>
   </nav>
 
   <div id="menu-btn" class="fas fa-bars"></div>
@@ -46,7 +46,7 @@
     -moz-transition: 0.2s linear;
     -ms-transition: 0.2s linear;
     -o-transition: 0.2s linear;
-    text-transform: capitalize;
+    text-transform: none !important;
   }
 
   *::selection {
@@ -67,7 +67,7 @@
     padding: 2rem;
   }
 
-  .header_login {
+  .header {
     position: fixed;
     top: 0;
     left: 0;
@@ -76,34 +76,35 @@
     background-color: var(--black-white);
   }
 
-  .header_login .flex {
+  .header .flex {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .header_login .flex .logo img {
+  .header .flex .logo img {
     width: 40px;
   }
 
-  .header_login .flex .navbar p {
+  .header .flex .navbar p {
     font-size: 1.5rem;
   }
 
-  .header_login .flex .navbar p span {
+  .header .flex .navbar p span {
     font-size: 1.6rem;
     color: var(--green2);
   }
 
-  .header_login .flex .navbar a {
+  .header .flex .navbar a {
     margin-left: 2rem;
     color: var(--white);
     font-size: 2rem;
     padding: 2rem;
+    cursor: pointer;
   }
 
-  .header_login .flex .navbar a:hover {
+  .header .flex .navbar a:hover {
     color: var(--green);
   }
 
@@ -127,7 +128,7 @@
       -o-transform: rotate(180deg);
     }
 
-    .header_login .flex .navbar {
+    .header .flex .navbar {
       position: absolute;
       top: 99%;
       left: 0;
@@ -138,11 +139,11 @@
       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
 
-    .header_login .flex .navbar.active {
+    .header .flex .navbar.active {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 
-    .header_login .flex .navbar a {
+    .header .flex .navbar a {
       display: block;
     }
   }
